@@ -7,23 +7,23 @@ about: Use this template to propose a new swag opportunity
 
 - [ ] I've checked that this isn't a duplicate issue.
 
-Q. Which company offers it?  
-A. : 
+Q. Which company offers it?
+A. :
 
-Q. Where have you seen the announcement (URL)?  
-A. : 
+Q. Where have you seen the announcement (URL)?
+A. :
 
-Q. What kind of swag (clothing, stickers, ...)?  
-A. : 
+Q. What kind of swag (clothing, stickers, ...)?
+A. :
 
-Q. Have you received swag from this?  
-A. : 
+Q. Have you received swag from this?
+A. :
 
-Q. How long did it take?  
-A. : 
+Q. How long did it take?
+A. :
 
-Q. Does it ship worldwide?  
-A. : 
+Q. Does it ship worldwide?
+A. :
 
 <!-- Anything to add? -->
 

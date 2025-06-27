@@ -6,7 +6,7 @@
 Implement swag opportunity: <swag-name>
 
 Closes #<swag-issue-number>
-  
+
 **Things to check:**
 
 - [ ] Date Added is today (the date of the PR)

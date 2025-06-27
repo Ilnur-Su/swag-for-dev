@@ -37,7 +37,7 @@ As this project is community-driven, it'd be really helpful if you comment on th
 
 Please consider donating to cover up our hosting costs. 🙏
 
-## Development
+## Developmen
 
 ### Online one-click setup
 

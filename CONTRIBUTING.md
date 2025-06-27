@@ -37,7 +37,7 @@ Contribute to swag-for-dev using a fully featured online development environment
 
 1. Clone this repository by running
 ```sh
-git clone https://github.com/swapagarwal/swag-for-dev.git
+git clone https://github.com/swapagarwal/swag-for-dev.gi
 ```
 1. Ensure you are running an up-to-date version of [Node.js](https://nodejs.org/en/download/package-manager/) on your machine, that you have `npm` and [`nvm` installed](https://github.com/nvm-sh/nvm).
 1. Open a terminal in the `swag-for-dev` directory. Type
@@ -51,7 +51,7 @@ git clone https://github.com/swapagarwal/swag-for-dev.git
     ```
     into to install the dependencies. To start the webserver, type
     ```sh
-    npm start
+    npm star
     ```
 1. The website should open in a browser after it compiles, or you can view it by going to http://127.0.0.1:8000
 
@@ -63,14 +63,14 @@ git clone https://github.com/swapagarwal/swag-for-dev.git
     ```
 1. Dist is now ready in the `swag-for-dev/dist` directory. You can use any web-server to preview it in your browser. One way is using `http-server` module directly from npm as follows
     ```sh
-    npx http-server -p 8000 ./dist
+    npx http-server -p 8000 ./dis
     ```
 
 ### Start using Docker
 
 1. Clone this repository by running
 ```sh
-git clone https://github.com/swapagarwal/swag-for-dev.git
+git clone https://github.com/swapagarwal/swag-for-dev.gi
 ```
 1. Ensure you are running an up-to-date version of [Docker](https://docs.docker.com/install/) on your machine.
 1. Open a terminal in the `swag-for-dev` directory. Type
@@ -80,26 +80,26 @@ git clone https://github.com/swapagarwal/swag-for-dev.git
     to build a docker image `devswag:dev`.
 1. You now have to run this image with
     ```sh
-    docker run -it --rm \
-    -v $(pwd)/data.json:/devswag/data.json \
-    -v $(pwd)/src:/devswag/src \
-    -v $(pwd)/gulpfile.js:/devswag/gulpfile.js \
-    -v $(pwd)/scripts:/devswag/scripts \
-    -v $(pwd)/dist:/devswag/dist \
-    -u $(id -u):$(id -g) \
+    docker run -it --rm
+    -v $(pwd)/data.json:/devswag/data.json
+    -v $(pwd)/src:/devswag/src
+    -v $(pwd)/gulpfile.js:/devswag/gulpfile.js
+    -v $(pwd)/scripts:/devswag/scripts
+    -v $(pwd)/dist:/devswag/dis
+    -u $(id -u):$(id -g)
     -p 8000:8000 -p 35729:35729 devswag:dev
     ```
 1. You can view the website after it compiles by going to http://127.0.0.1:8000
 
 > Tip: You can use an alias to ease the terminal use, simply type
 > ```sh
->  alias devswag='docker run -it --rm \
-> -v $(pwd)/data.json:/devswag/data.json \
-> -v $(pwd)/src:/devswag/src \
-> -v $(pwd)/gulpfile.js:/devswag/gulpfile.js \
-> -v $(pwd)/scripts:/devswag/scripts \
-> -v $(pwd)/dist:/devswag/dist \
-> -u $(id -u):$(id -g) \
+>  alias devswag='docker run -it --rm
+> -v $(pwd)/data.json:/devswag/data.json
+> -v $(pwd)/src:/devswag/src
+> -v $(pwd)/gulpfile.js:/devswag/gulpfile.js
+> -v $(pwd)/scripts:/devswag/scripts
+> -v $(pwd)/dist:/devswag/dis
+> -u $(id -u):$(id -g)
 > -p 8000:8000 -p 35729:35729 devswag:dev npm run'
 > ```
 > and use it like
@@ -152,7 +152,7 @@ services:
         - 8000:80
 
     # Development release
-    # To use the following service, you may have to export
+    # To use the following service, you may have to expor
     # the $UID and $GID variables from bash before using
     # docker-compose command. Here's how:
     # $ export UID=$(id -u)
@@ -168,7 +168,7 @@ services:
         volumes:
         - ./data.json:/swag-for-dev/data.json
         - ./site/src:/swag-for-dev/site/src
-        - ./site/dist:/swag-for-dev/site/dist
+        - ./site/dist:/swag-for-dev/site/dis
         - ./site/.eslintrc:/swag-for-dev/site/.eslintrc
         - ./site/gulpfile.js:/swag-for-dev/site/gulpfile.js
         environment:
@@ -178,5 +178,5 @@ services:
         - 8000:8000
         - 35729:35729
         user: "${UID:-1000}:${GID:-1000}"
-        command: npm start
+        command: npm star
 ```

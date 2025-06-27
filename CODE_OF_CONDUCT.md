@@ -1,4 +1,4 @@
-# Code of Conduct
+# Code of Conduc
 
 We want to be an open community, and we know Codes of Conduct can be difficult to understand. In light of that, we want to keep our Code of Conduct simple. If we run into issues, this document will be revised.
 

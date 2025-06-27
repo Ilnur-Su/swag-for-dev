@@ -16,13 +16,13 @@ Each event displayed at devSwag.io is a JSON object like this:
 
 ```js
 {
-    "name": "npm", // Name of the event
+    "name": "npm", // Name of the even
     "difficulty": "hard", // Difficult rating
     "description": "Fix a <a href='https://npm.community/c/bugs'>bug</a>, get a fashionable pair of socks!", // Brief description
     "reference": "http://blog.npmjs.org/post/129827785565/npm-weekly-30-package-scripts-for-tooling-a", // Link to the source
     "image": "https://partners.npmjs.com/weekly/weekly30/socks-1100x.jpg", // Image URL
     "dateAdded": "2018-02-18T06:03:12.000Z", // Date Added
-    "tags": ["clothing"] // Tags to filter the event
+    "tags": ["clothing"] // Tags to filter the even
 }
 ```
 Accompanying this is a script stored in `scripts/get-data.js` which extracts the image url of the event and generates unique filenames for each image file that will be downloaded later.

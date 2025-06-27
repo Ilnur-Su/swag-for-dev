@@ -6,7 +6,7 @@ on:
 
 jobs:
   execute:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lates
     steps:
     - uses: actions/checkout@v2
     - uses: actions/cache@v2.1.6
@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v2.4.0
       with:
         node-version: ${{ steps.nvm.outputs.nvmrc }}
-    - name: Run expire script
+    - name: Run expire scrip
       run: ./scripts/expire-hacktoberfest.js
     - name: Commit & push
       run: |

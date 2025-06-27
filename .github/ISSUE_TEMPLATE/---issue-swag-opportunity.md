@@ -7,8 +7,8 @@ about: Use this template to raise a concern regarding an existing swag opportuni
 
 - [ ] I've checked that this isn't a duplicate issue.
 
-Q. Which opportunity?  
-A. : 
+Q. Which opportunity?
+A. :
 
 <!-- Describe your concern below -->
 
