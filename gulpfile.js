@@ -122,9 +122,9 @@ gulp.task('swag-img:clean', () => {
 
 gulp.task('swag-img:download', async () => {
 	const success = await downloadImages(swagImages, 'dist/assets/swag-img');
-	if (!success) {
-		throw new Error('Failed to download images');
-	}
+if (!success) {
+	throw new Error('Failed to download images');
+}
 });
 
 gulp.task('swag-img:optimize', cb => {

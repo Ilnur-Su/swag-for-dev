@@ -22,6 +22,7 @@ const sortingInput = document.querySelector('#sorting');
 const tagsSelect = document.querySelector('#tags');
 const showExpired = document.querySelector('#expired');
 const hideCompleted = document.querySelector('#completed');
+const resetButton = document.querySelector('#reset-all');
 
 const activateElements = els => Array.from(els).forEach(node => node.classList.add(ACTIVE_CLASS));
 const allowDifficultySelect = shouldAllow => sortingInput.querySelectorAll('.difficulty')
@@ -168,6 +169,41 @@ function cascade(force = false) {
 	updateUrl();
 }
 
+function resetAllFilters() {
+	// Reset difficulty filter
+	filterInput.value = 'alldifficulties';
+	
+	// Reset sorting
+	sortingInput.value = 'DATEADDED_DESCENDING';
+	
+	// Reset tags
+	selectr.setValue([]);
+	
+	// Reset checkboxes
+	showExpired.checked = false;
+	hideCompleted.checked = false;
+	
+	// Clear URL parameters
+	if (search) {
+		search.delete('tags');
+		search.delete('expired');
+		search.delete('hide-completed');
+		updateUrl();
+	}
+	
+	// Apply changes
+	cascade.call(window, true);
+	
+	// Visual feedback
+	resetButton.textContent = 'Reset!';
+	resetButton.classList.add('resetting');
+	
+	setTimeout(() => {
+		resetButton.textContent = 'Reset All';
+		resetButton.classList.remove('resetting');
+	}, 1000);
+}
+
 function completedCardsInit(elements) {
 	const completedItems = getCompletedItems();
 
@@ -216,6 +252,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	sortingInput.addEventListener('input', cascade);
 	showExpired.addEventListener('change', cascade);
 	hideCompleted.addEventListener('change', cascade);
+	resetButton.addEventListener('click', resetAllFilters);
 
 	completedCardsInit(document.querySelectorAll('.complete-notice'));
 

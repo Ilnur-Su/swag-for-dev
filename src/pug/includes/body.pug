@@ -12,38 +12,64 @@
 
 		.buttons
 			.flex.controls
-				.item.flex
-					span.title Level
-					.select-wrapper
-						label.sr-only(for="filter") Filter opportunity difficulty
-						select#filter
-							for filter in ['All difficulties', 'Easy', 'Medium', 'Hard']
-								option(value=filter.replace(/ /g, '').toLowerCase()) #{filter}
+				.controls-header
+					svg.controls-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+						path(d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z")
+				
+				.controls-grid
+					.control-group
+						label.control-label(for="filter")
+							svg.control-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+								path(d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z")
+							span Difficulty Level
+						.select-wrapper
+							select#filter.control-select
+								for filter in ['All difficulties', 'Easy', 'Medium', 'Hard']
+									option(value=filter.replace(/ /g, '').toLowerCase()) #{filter}
 
-				.item.flex
-					span.title Order
-					.select-wrapper
-						label.sr-only(for="sorting") Sort opportunities
-						select#sorting
-							option(value="DATEADDED_DESCENDING" class="dateAdded") Newest First
-							option(value="DATEADDED_ASCENDING" class="dateAdded") Oldest First
-							option(value="ALPHABETICAL_ASCENDING" class="alphabetical") A -> Z
-							option(value="ALPHABETICAL_DESCENDING" class="alphabetical") Z -> A
-							option(value="DIFFICULTY_ASCENDING" class="difficulty") Difficulty: Easy to Hard
-							option(value="DIFFICULTY_DESCENDING" class="difficulty") Difficulty: Hard to Easy
+					.control-group
+						label.control-label(for="sorting")
+							svg.control-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+								path(d="M3 4h18M7 8h10M9 12h6M11 16h2")
+							span Sort By
+						.select-wrapper
+							select#sorting.control-select
+								option(value="DATEADDED_DESCENDING" class="dateAdded") Newest First
+								option(value="DATEADDED_ASCENDING" class="dateAdded") Oldest First
+								option(value="ALPHABETICAL_ASCENDING" class="alphabetical") A → Z
+								option(value="ALPHABETICAL_DESCENDING" class="alphabetical") Z → A
+								option(value="DIFFICULTY_ASCENDING" class="difficulty") Difficulty: Easy to Hard
+								option(value="DIFFICULTY_DESCENDING" class="difficulty") Difficulty: Hard to Easy
 
-				.item.flex
-					span.title Filter
-					select#tags.hidden
+					.control-group
+						label.control-label(for="tags")
+							svg.control-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+								path(d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z")
+							span Tags
+						select#tags.hidden.control-select
 
-				.item.flex
-					input(type="checkbox" id="expired")
-					label(for="expired") Show expired opportunities
+				.controls-options
+					.option-group
+						label.option-label(for="expired")
+							input.option-checkbox(type="checkbox" id="expired")
+							span.option-text
+								svg.option-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+									path(d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z")
+								span Show expired opportunities
 
+					.option-group
+						label.option-label(for="completed")
+							input.option-checkbox(type="checkbox" id="completed")
+							span.option-text
+								svg.option-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+									path(d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z")
+								span Hide completed opportunities
 
-				.item.flex
-					input(type="checkbox" id="completed")
-					label(for="completed") Hide completed opportunities
+				.controls-actions
+					button#reset-all.btn.reset-btn(type="button")
+						svg.reset-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2")
+							path(d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15")
+						span Reset All
 
 		.content.flex#content
 			- let difficulty;

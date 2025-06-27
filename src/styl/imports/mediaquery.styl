@@ -6,9 +6,80 @@
 			.heading
 				padding 4rem 2rem
 		.controls
-			justify-content left
-		.buttons
-			.item, .select-wrapper, select
-				width 100%
+			margin 2rem 1rem 0
+			padding 2rem
+			
+			.controls-header
+				margin-bottom 1.5rem
+				
+				.controls-icon
+					width 2.5rem
+					height 2.5rem
+			
+			.controls-grid
+				flex-direction column
+				gap 1.5rem
+				margin-bottom 2rem
+				
+				.control-group
+					min-width auto
+					
+					.control-label
+						font-size 1.3rem
+						
+						.control-icon
+							width 1.4rem
+							height 1.4rem
+					
+					.select-wrapper
+						.control-select
+							font-size 1.4rem
+							padding 1rem 1.2rem
+			
+			.controls-options
+				flex-direction column
+				gap 1.5rem
+				padding 1.5rem
+				margin-bottom 2rem
+				
+				.option-group
+					.option-label
+						.option-text
+							font-size 1.4rem
+							
+							.option-icon
+								width 1.4rem
+								height 1.4rem
+			
+			.controls-actions
+				.reset-btn
+					width 100%
+					justify-content center
+					font-size 1.5rem
+					padding 1rem 2rem
+					
+					.reset-icon
+						width 1.6rem
+						height 1.6rem
+	
+	// Selectr mobile styles
+	.selectr-container
+		.selectr-selected
+			font-size 1.4rem
+			padding 1rem 1.2rem
+			min-height 4.2rem
+		
+		.selectr-options
+			max-height 150px
+		
+		.selectr-option
+			font-size 1.3rem
+			padding 0.8rem 1rem
+		
+		.selectr-tag
+			font-size 1.2rem
+			padding 0.3rem 0.6rem
+			margin 0.1rem 0.3rem 0.1rem 0
+	
 	footer
 		padding 5rem 5rem 8rem
